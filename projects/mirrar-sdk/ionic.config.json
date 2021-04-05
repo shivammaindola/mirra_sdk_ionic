@@ -1,0 +1,7 @@
+{
+  "name": "mirrar-sdk",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
