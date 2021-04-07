@@ -6,6 +6,9 @@
   },
   "allowedNonPeerDependencies": [
     "@ionic-native/in-app-browser",
-    "@ionic-native/core"
+    "@ionic-native/core",
+    "@ionic-native/android-permissions",
+    "@ionic/angular",
+    "@ionic-native/camera"
 ]
 }

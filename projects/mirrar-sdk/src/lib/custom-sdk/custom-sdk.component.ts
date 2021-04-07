@@ -3,11 +3,13 @@ import { Input } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 //import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+
 @Component({
   selector: 'dev-custom-sdk',
   templateUrl: './custom-sdk.component.html',
   styleUrls: ['./custom-sdk.component.css']
 })
+
 export class CustomSdkComponent implements OnInit {
 
   @Input() username: string;
@@ -39,16 +41,11 @@ openURL() {
       '&password='+this.password+
       '&type=android_sdk';
 
-    //alert(body);
-
     this.http.post(url, body, httpOptions).subscribe((response) => {
       //console.log("data is : "+JSON.stringify(response))
       var responseString = JSON.stringify(response);
       var json = JSON.parse(responseString);
       var userData = JSON.parse(this.jsonString);
-      // parse json data and pass json string
-      //console.log("JSONDATA is : "+JSON.stringify(jsonData['data'])); //
-      //console.log("LEngth is: "+Object.keys(json['data']['active_product_codes']).length);
 
       var length1 = Object.keys(json.data.active_product_codes).length;
 

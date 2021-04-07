@@ -5,7 +5,7 @@ import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
 import { MirrarSdkService } from './mirrar-sdk.service';
 import { MirrarSdkComponent } from './mirrar-sdk.component';
 import { CustomSdkComponent } from './custom-sdk/custom-sdk.component';
-
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 export interface LibConfig {
   apiUrl: string;
 }
@@ -37,6 +37,7 @@ export class MirrarSdkModule {
           useValue: config
         },
         InAppBrowser,
+        AndroidPermissions
       ]
     };
   }

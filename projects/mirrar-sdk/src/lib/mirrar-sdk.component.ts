@@ -12,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MirrarSdkComponent implements OnInit {
 
-  constructor() { }
+constructor() {
+    
+}
+  ngOnInit(){
+    
 
-  ngOnInit(): void {
+   
   }
 
 }
